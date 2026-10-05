@@ -1,4 +1,5 @@
 [
+  
   {
     "path": "config/app.conf",echo hacker
     "sha256": "1f617b878bd7e7294c92ac91b300973ed43fa4050a29f3fc358d73e572c08d53",
