@@ -1,8 +1,6 @@
 from fastapi import FastAPI
-
 from labs.lab03.routers import categories
-
-# from labs.lab03.routers import records # розкоментуємо пізніше
+from labs.lab03.routers import records
 
 app = FastAPI(
     title="Реєстр вразливостей мережевих сервісів",
@@ -10,17 +8,16 @@ app = FastAPI(
 )
 
 app.include_router(categories.router)
-
+app.include_router(records.router)
 
 @app.get("/ping")
 def ping():
     return {"status": "ok"}
-
 
 @app.get("/student")
 def get_student():
     return {
         "student_name": "Олексій Денис Олегович",
         "group_name": "КБ-104",
-        "variant_number": 2,
+        "variant_number": 2
     }
